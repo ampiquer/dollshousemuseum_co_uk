@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+         <!--favicon-->
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        
+        <title>Rustic Doll's House</title>
+        
+        <meta charset="utf-8">
+        <meta name="description" content="rustic house">
+        <meta name="keywords" content="dolls dollshouse thimbles thimble collection virtual museum">
+        <meta name="author" content="Arantxa Martinez Piquer">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    
+    <body>
+        
+        <header>
+            <img src="img/logo.png" alt="logo" id="logo"/>
+            <p><b>Doll's House Museum</b></p>
+             <div id="language">
+                <a href="rustica.html"><img src="img/british-flag.png" alt="english language link"/></a>
+                <a href="sprustica.html"><img src="img/spanish-flag.png" alt="spanish language link"/></a>
+            </div>
+        </header>
+        
+        <nav> <!-- Toggle to be used for the hamburguer menu on smaller devices-->
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle">
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dollshouse.html">Explore the Doll's Houses!</a></li>
+                    <li><a href="thimbles.html">Thimbles gallery</a></li>
+                    <li><a href="about.html">About us</a></li>
+                 </ul>
+            </div>
+        </nav>
+        
+        <main>
+            <article id="rustica">
+                <section class="explaining-text" style="text-align: center; padding-top: 20px; padding-bottom: 20px;">
+                    Explore each room of this doll's house to find hidden facts about it.
+                </section>
+                
+                <section id="rustica-img">
+                    <img src="css/rustica.jpg" alt="rustic house">
+                    <button id="btn1" class="rustica-btn mvl"><p>Living Room / Kitchen</p></button>
+                    <button id="btn2" class="rustica-btn mvl"><p>Bathroom</p></button>
+                    <button id="btn3" class="rustica-btn mvl"><p>Bedroom / Office</p></button>
+                    <button id="btn4" class="rustica-btn mvl"><p>Outside</p></button>
+                </section>
+                
+                  <div class="rustica-modal">
+                        <div class="rustica-modal-content">
+                             <span class="rustica-close">&times;</span>
+                            <img src="img/rustica1.jpg" alt="living room and kitchen on rustic house">
+                            <div class="info"><p>In this room we find situated the dolls. They have been dressed up by Silvia with handmade clothing. Other things improved in this room are the curtains (hand made as usual) and the decoration on the back wall where you can see cross-point art in frames. </p><p>A funny detail is the rug, since it used to be a cheese envelope.</p></div>
+                      </div>
+                </div>
+                   <div class="rustica-modal">
+                        <div class="rustica-modal-content">
+                             <span class="rustica-close">&times;</span>
+                            <img src="img/rustica3.jpg" alt="bathroom on rustic house">
+                               <div class="info"><p><br>The bathroom contains every piece as it came with the kit, except the hat and bag on the standing coat rack, they are handmade by using crochet.</p></div>
+                      </div>
+                </div>
+                   <div class="rustica-modal">
+                        <div class="rustica-modal-content">
+                             <span class="rustica-close">&times;</span>
+                            <img src="img/rustica4.jpg" alt="bedroom and office on rustic house">
+                               <div class="info"><p>There are several crocheted things in this room hand made by Silvia, like the blanket on top of the bed or the duvet itself.</p><p>Interesting fact, the first item for our doll's house we ever bought online is the blue vase in the middle of the bedroom.</p></div>
+                      </div>
+                </div>
+                   <div class="rustica-modal">
+                        <div class="rustica-modal-content">
+                             <span class="rustica-close">&times;</span>
+                            <img src="img/rustica2.jpg" alt="outside on rustic house">
+                               <div class="info"><p><br>The small outside area hasn't change that much, but we've added the little birds above to enhance the rustic spirit of the house.</p></div>
+                      </div>
+                </div>
+                
+            </article> 
+            <script>
+            
+                //javascript for the modals
+                     
+                    // Get the modal
+                    var rustica_modalparent = document.getElementsByClassName("rustica-modal");
+
+                    // Get the button that opens the modal
+                    var rustica_btn_multi = document.getElementsByClassName("rustica-btn");
+
+                    // Get the <span> element that closes the modal
+                    var rustica_span_multi = document.getElementsByClassName("rustica-close");
+
+                    // When the user clicks the button, open the modal
+                    function setDataIndex_rustica() {
+
+                    for (i = 0; i < rustica_btn_multi.length; i++)
+                    {
+                        rustica_btn_multi[i].setAttribute('data-index', i);
+                        rustica_modalparent[i].setAttribute('data-index', i);
+                        rustica_span_multi[i].setAttribute('data-index', i);
+                    }
+                    }
+
+                    for (i = 0; i < rustica_btn_multi.length; i++)
+                    {
+                        rustica_btn_multi[i].onclick = function() {
+                        var ElementIndex = this.getAttribute('data-index');
+                        rustica_modalparent[ElementIndex].style.display = "block";
+                    };
+
+                    // When the user clicks on <span> (x), close the modal
+                    rustica_span_multi[i].onclick = function() {
+                        var ElementIndex = this.getAttribute('data-index');
+                        rustica_modalparent[ElementIndex].style.display = "none";
+                    };
+                    }
+
+                    window.onload = function() {
+
+                        setDataIndex_rustica();
+                    };
+
+                    window.onclick = function(event) {
+                        if (event.target === rustica_modalparent[event.target.getAttribute('data-index')]) {
+                            rustica_modalparent[event.target.getAttribute('data-index')].style.display = "none";
+                    }
+                    };
+                
+                
+            </script>
+        </main>
+    </body>
+    <footer>
+            <p>&copy; 2018 - Arantxa Martinez Piquer</p>
+            <!--<a href="comment.html" id="comment"><b>Leave us a comment!</b></a>-->
+        </footer>
+</html>
+    
+    
+    

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <!--favicon-->
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        
+        <title>Dolls House Museum</title>
+        
+        <meta charset="utf-8">
+        <meta name="description" content="Dolls House and Thimbles Virtual Museum">
+        <meta name="keywords" content="dolls dollshouse thimbles thimble collection virtual museum">
+        <meta name="author" content="Arantxa Martinez Piquer">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    
+    <body>
+        
+        <header>
+            <img src="img/logo.png" alt="logo" id="logo"/>
+            <p><b>Doll's House Museum</b></p>
+            <div id="language">
+                <a href="index.html"><img src="img/british-flag.png" alt="english language link"/></a>
+                <a href="spindex.html"><img src="img/spanish-flag.png" alt="spanish language link"/></a>
+            </div>
+        </header>
+        
+        <nav> <!-- Toggle to be used for the hamburguer menu on smaller devices-->
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle">
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dollshouse.html">Explore the Doll's Houses!</a></li>
+                    <li><a href="thimbles.html">Thimbles gallery</a></li>
+                    <li><a href="about.html">About us</a></li>
+                 </ul>
+            </div>
+        </nav>
+        
+        <main>
+            <article id="homepage">
+                <section id="welcome">
+                    <h3>Welcome!</h3>
+                    <p>Thank you for visiting our virtual museum. <br>   We are passionate about our doll's houses and our thimble collection and we appreciate you spending some time exploring this web.</p>
+                    <p>We hope you enjoy!</p>
+                    <p class="signature">Silvia &amp; Pablo</p>
+                </section>
+                
+                <section id="slide">
+                    <div class="slideshow-container">
+                        <div class="mySlides fade"><a href="dollshouse.html"><img src="img/collage-houses.png.png" alt="dolls house composition"/></a></div>
+                        <div class="mySlides fade"><a href="thimbles.html"><img src="img/college-thimbles.png" alt="thimbles composition"/></a></div>
+                        
+                        <!--next and previous buttoms-->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    
+                        <!--The dots-->
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                    </div>
+                </section>
+            </article> 
+            
+             <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                //next/previous controls
+                function plusSlides(n) {
+                    showSlides(slideIndex+=n);
+                }
+                
+                //thumbnail image controls
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    
+                    if (n > slides.length) {
+                        slideIndex = 1
+                    }
+                    
+                    if (n < 1) {
+                        slideIndex = slides.length
+                    }
+                    
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                }
+            </script>
+        </main>
+    </body>
+    <footer>
+            <p>&copy; 2018 - Arantxa Martinez Piquer</p>
+            <!--<a href="comment.html" id="comment"><b>Leave us a comment!</b></a>-->
+        </footer>
+</html>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+         <!--favicon-->
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        
+        <title>Second Doll's House</title>
+        
+        <meta charset="utf-8">
+        <meta name="description" content="second doll's house">
+        <meta name="keywords" content="dolls dollshouse thimbles thimble collection virtual museum">
+        <meta name="author" content="Arantxa Martinez Piquer">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    
+    <body>
+        
+        <header>
+            <img src="img/logo.png" alt="logo" id="logo"/>
+            <p><b>Doll's House Museum</b></p>
+            <div id="language">
+                <a href="house2.html"><img src="img/british-flag.png" alt="english language link"/></a>
+                <a href="sphouse2.html"><img src="img/spanish-flag.png" alt="spanish language link"/></a>
+            </div>
+        </header>
+        
+        <nav> <!-- Toggle to be used for the hamburguer menu on smaller devices-->
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle">
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dollshouse.html">Explore the Doll's Houses!</a></li>
+                    <li><a href="thimbles.html">Thimbles gallery</a></li>
+                    <li><a href="about.html">About us</a></li>
+                 </ul>
+            </div>
+        </nav>
+        
+        <main>
+            <article id="house2">
+                <section class="explaining-text" style="text-align: center; padding-top: 20px; padding-bottom: 20px;">
+                    Explore each room of this doll's house to find hidden facts about it.
+                </section>
+                
+                <section id="house2-img">
+                    <img src="css/house2.jpg" alt="second doll's house">
+                    <button id="h2-btn1" class="house2-btn mvl"><p>Kids room</p></button>
+                    <button id="h2-btn2" class="house2-btn mvl"><p>Play room</p></button>
+                    <button id="h2-btn3" class="house2-btn mvl"><p>Bathroom</p></button>
+                    <button id="h2-btn4" class="house2-btn mvl"><p>Bedroom</p></button>
+                    <button id="h2-btn5" class="house2-btn mvl"><p>Living room</p></button>
+                    <button id="h2-btn6" class="house2-btn mvl"><p>Kitchen</p></button>
+                    
+                </section>
+                
+                  <div class="house2-modal">
+                        <div class="house2-modal-content">
+                             <span class="house2-close">&times;</span>
+                            <img src="img/house2-1.jpg" alt="Kids room on second house">
+                              <div class="info"><p><br>The teddy bear on top of the bed was a gift and it is handmade.</p><p> Both the wardrobe and the baby cot were repainted by us taking inspiration from traditional Austrian houses.</p></div>
+                      </div>
+                </div>
+                   <div class="house2-modal">
+                        <div class="house2-modal-content">
+                             <span class="house2-close">&times;</span>
+                            <img src="img/house2-2.jpg" alt="Play room on second house">
+                            <div class="info"> <p><br>The ludos game on top of the small table was handmade by us.</p>All the dolls were bought online and the clothes were handmade by Silvia. In this house we decided not to install light. <p></p></div>
+                      </div>
+                </div>
+                   <div class="house2-modal">
+                        <div class="house2-modal-content">
+                             <span class="house2-close">&times;</span>
+                            <img src="img/house2-3.jpg" alt="bathroom on second house">
+                            <div class="info"> <P>The bathroom has all the furniture as it came with the kit but we added the big heater in the corner after we saw them in palaces in Vienna.</P> <p> The ladybug rug was cross-stitched by our daughter when she was a teen and Silvia painted the basin that was originally white.</p></div>
+                      </div>
+                </div>
+                   <div class="house2-modal">
+                        <div class="house2-modal-content">
+                             <span class="house2-close">&times;</span>
+                            <img src="img/house2-4.jpg" alt="bedroom on second house">
+                            <div class="info"><p><br>The bedroom has stayed the same, but as usual, Silvia has handmade the bed clothing.</p><p>Do you recognize the people on the pictures in the back? Our love for Pride and Prejudice is present in our houses!</p></div>
+                      </div>
+                </div>
+                <div class="house2-modal">
+                        <div class="house2-modal-content">
+                             <span class="house2-close">&times;</span>
+                            <img src="img/house2-5.jpg" alt="living room on second house">
+                            <div class="info"><p>In this room we find a very interesting tablecloth... which is actually a handkerchief from 1958.</p><p>We also included a picture of our family over the piano, and once again the dolls were dressed by Silvia.</p></div>
+                            
+                      </div>
+                </div>
+                <div class="house2-modal">
+                        <div class="house2-modal-content">
+                             <span class="house2-close">&times;</span>
+                            <img src="img/house2-6.jpg" alt="kitchen on second house">
+                            <div class="info"><p><br>We love to make our kitchens as full of live as possible, that's why we include so many details. And some of them handmade! Like the bread bag or the sink area.</p><p>The glass pitchers in the front are from the beginning of the XX century.</p></div>
+                      </div>
+                </div>
+                
+            </article> 
+            <script>
+            
+                //javascript for the modals
+                     
+                    // Get the modal
+                    var house2_modalparent = document.getElementsByClassName("house2-modal");
+
+                    // Get the button that opens the modal
+                    var house2_btn_multi = document.getElementsByClassName("house2-btn");
+
+                    // Get the <span> element that closes the modal
+                    var house2_span_multi = document.getElementsByClassName("house2-close");
+
+                    // When the user clicks the button, open the modal
+                    function setDataIndex_house2() {
+
+                    for (i = 0; i < house2_btn_multi.length; i++)
+                    {
+                        house2_btn_multi[i].setAttribute('data-index', i);
+                        house2_modalparent[i].setAttribute('data-index', i);
+                        house2_span_multi[i].setAttribute('data-index', i);
+                    }
+                    }
+
+                    for (i = 0; i < house2_btn_multi.length; i++)
+                    {
+                        house2_btn_multi[i].onclick = function() {
+                        var ElementIndex = this.getAttribute('data-index');
+                        house2_modalparent[ElementIndex].style.display = "block";
+                    };
+
+                    // When the user clicks on <span> (x), close the modal
+                    house2_span_multi[i].onclick = function() {
+                        var ElementIndex = this.getAttribute('data-index');
+                        house2_modalparent[ElementIndex].style.display = "none";
+                    };
+                    }
+
+                    window.onload = function() {
+
+                        setDataIndex_house2();
+                    };
+
+                    window.onclick = function(event) {
+                        if (event.target === house2_modalparent[event.target.getAttribute('data-index')]) {
+                            house2_modalparent[event.target.getAttribute('data-index')].style.display = "none";
+                    }
+                    };
+                
+                
+            </script>
+        </main>
+    </body>
+    <footer>
+            <p>&copy; 2018 - Arantxa Martinez Piquer</p>
+            <!--<a href="comment.html" id="comment"><b>Leave us a comment!</b></a>-->
+        </footer>
+</html>

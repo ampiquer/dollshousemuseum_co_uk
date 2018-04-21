@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+         <!--favicon-->
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        
+        <title>Casa de Muñecas Andaluza</title>
+        
+        <meta charset="utf-8">
+        <meta name="description" content="casa de muñecas andaluza">
+        <meta name="keywords" content="muñecas casasmuñecas dedales dedal colección coleccion virtual museo">
+        <meta name="author" content="Arantxa Martinez Piquer">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    
+    <body>
+        
+        <header>
+            <img src="img/logo.png" alt="logo" id="logo"/>
+            <p><b>Museo Casas de Muñecas</b></p>            
+            <div id="language">
+                <a href="andalusian.html"><img src="img/british-flag.png" alt="english language link"/></a>
+                <a href="spandalusian.html"><img src="img/spanish-flag.png" alt="spanish language link"/></a>
+            </div>
+        </header>
+        
+        <nav> <!-- Toggle to be used for the hamburguer menu on smaller devices-->
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle">
+            <div class="menu">
+                <ul>
+                    <li><a href="spindex.html">Inicio</a></li>
+                    <li><a href="spdollshouse.html">¡Explora las casas de Muñecas!</a></li>
+                    <li><a href="spthimbles.html">Galería de Dedales</a></li>
+                    <li><a href="spabout.html">Acerca de</a></li>
+                 </ul>
+            </div>
+        </nav>
+        
+         <main>
+            <article id="andalusian">
+                <section class="explaining-text" style="text-align: center; padding-top: 20px; padding-bottom: 20px;">
+                    Explora cada habitación de la casa de muñecas para saber más de ella.
+                </section>
+                
+                <section id="andalusian-img">
+                    <img src="css/andaluza.jpg" alt="andalusian doll's house">
+                    <button id="and-btn1" class="andalusian-btn mvl"><p>Exterior</p></button>
+                    <button id="and-btn2" class="andalusian-btn mvl"><p>Cocina</p></button>
+                    <button id="and-btn3" class="andalusian-btn mvl"><p>Habitación</p></button>
+                    <button id="and-btn4" class="andalusian-btn mvl"><p>Baño </p></button>
+                    <button id="and-btn5" class="andalusian-btn mvl"><p>Sala de trabajo</p></button>
+                    <button id="and-btn6" class="andalusian-btn mvl"><p>Fachada</p></button>
+                    
+                </section>
+                
+                  <div class="andalusian-modal">
+                        <div class="andalusian-modal-content">
+                             <span class="andalusian-close">&times;</span>
+                            <img src="img/andalusian1.jpg" alt="exterior">
+                            <div class="info"><p><br>Este es un patio muy tradicional para una casa de este estilo así que no añadimos nada extra.</p></div>
+                      </div>
+                </div>
+                   <div class="andalusian-modal">
+                        <div class="andalusian-modal-content">
+                             <span class="andalusian-close">&times;</span>
+                            <img src="img/andalusian2.jpg" alt="cocina">
+                            <div class="info"><p><br>EEn la cocina añadimos el fregadero y el fogón, que compramos en una feria.</p></div>
+                      </div>
+                </div> 
+                <div class="andalusian-modal">
+                        <div class="andalusian-modal-content">
+                             <span class="andalusian-close">&times;</span>
+                            <img src="img/andalusian3.jpg" alt="habitación">
+                            <div class="info"><p><br>Esta casa es la excepción de nuestras otras casas porque ya que no tenemos a la vista el interior no hemos cambiado gran cosa del kit original.</p></div>
+                      </div>
+                </div> 
+                <div class="andalusian-modal">
+                        <div class="andalusian-modal-content">
+                             <span class="andalusian-close">&times;</span>
+                            <img src="img/andalusian4.jpg" alt="baño">
+                            <div class="info"><p><br>Esta casa también venía con instalación eléctrica y la mantuvimos porque incluso cerrada se ve muy bonita con las luces.</p></div>
+                      </div>
+                </div> 
+                <div class="andalusian-modal">
+                        <div class="andalusian-modal-content">
+                             <span class="andalusian-close">&times;</span>
+                            <img src="img/andalusian5.jpg" alt="sala de trabajo">
+                            <div class="info"><p><br>Esta casa se puso a la venta como un kit por fascículos a imagen de una casita que está en el museo de casas de muñecas de Málaga.</p></div>
+                      </div>
+                </div> 
+                <div class="andalusian-modal">
+                        <div class="andalusian-modal-content">
+                             <span class="andalusian-close">&times;</span>
+                            <img src="img/andalusian6.jpg" alt="fachada">
+                            <div class="info"><p><br>Es la única casa en donde hemos conservado la fachada original porque la consideramos bastante bonita.</p></div>
+                      </div>
+                </div> 
+                
+            </article> 
+            <script>
+            
+                //javascript for the modals
+                     
+                    // Get the modal
+                    var andalusian_modalparent = document.getElementsByClassName("andalusian-modal");
+
+                    // Get the button that opens the modal
+                    var andalusian_btn_multi = document.getElementsByClassName("andalusian-btn");
+
+                    // Get the <span> element that closes the modal
+                    var andalusian_span_multi = document.getElementsByClassName("andalusian-close");
+
+                    // When the user clicks the button, open the modal
+                    function setDataIndex_andalusian() {
+
+                    for (i = 0; i < andalusian_btn_multi.length; i++)
+                    {
+                        andalusian_btn_multi[i].setAttribute('data-index', i);
+                        andalusian_modalparent[i].setAttribute('data-index', i);
+                        andalusian_span_multi[i].setAttribute('data-index', i);
+                    }
+                    }
+
+                    for (i = 0; i < andalusian_btn_multi.length; i++)
+                    {
+                        andalusian_btn_multi[i].onclick = function() {
+                        var ElementIndex = this.getAttribute('data-index');
+                        andalusian_modalparent[ElementIndex].style.display = "block";
+                    };
+
+                    // When the user clicks on <span> (x), close the modal
+                    andalusian_span_multi[i].onclick = function() {
+                        var ElementIndex = this.getAttribute('data-index');
+                    andalusian_modalparent[ElementIndex].style.display = "none";
+                    };
+                    }
+
+                    window.onload = function() {
+
+                        setDataIndex_andalusian();
+                    };
+
+                    window.onclick = function(event) {
+                        if (event.target === andalusian_modalparent[event.target.getAttribute('data-index')]) {
+                            andalusian_modalparent[event.target.getAttribute('data-index')].style.display = "none";
+                    }
+                    };
+                
+                
+            </script>
+        </main>
+    </body>
+    <footer>
+            <p>&copy; 2018 - Arantxa Martinez Piquer</p>
+            <!--<a href="comment.html" id="comment"><b>Leave us a comment!</b></a>-->
+        </footer>
+</html>
