@@ -222,6 +222,9 @@ footer {
   font-weight: bold;
   margin-top: 1em;
 }
+#movil-text {
+  display: none;
+}
 #dollshouses-logos {
   display: flex;
   flex-direction: row;
@@ -1602,6 +1605,12 @@ footer {
   }
   .explaining-text {
     font-size: 20px;
+  }
+  #screen-text {
+    display: none;
+  }
+  #movil-text {
+    display: block;
   }
   #dollshouses-logos img {
     width: 80%;
