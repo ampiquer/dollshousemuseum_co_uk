@@ -250,7 +250,7 @@ footer {
   opacity: 0;
   transition: .5s ease;
   background-color: beige;
-  margin: 30px;
+  margin: 15px;
 }
 .logo-house:hover .overlay {
   opacity: 0.4;
@@ -1454,12 +1454,25 @@ footer {
     flex-direction: column;
   }
   #welcome {
-    width: 800px;
-    margin: 5em 4em 5em 8em;
+    width: auto;
+    margin: 2em;
+  }
+  nav .menu ul li {
+    display: inline;
+    margin: 0.5em;
+  }
+  #language {
+    margin-top: 2em;
   }
   #slide {
     flex-grow: 1;
     margin: 5em 5em 5em 6em;
+  }
+  #screen-text {
+    display: none;
+  }
+  #movil-text {
+    display: block;
   }
   .explaining-text {
     margin-top: 30px;
@@ -1472,7 +1485,7 @@ footer {
     height: 900px;
   }
   #dollshouses-logos img {
-    width: 80%;
+    width: 100%;
   }
   .overlay {
     opacity: 0.5;
@@ -1481,22 +1494,28 @@ footer {
     font-size: 80%;
   }
   #column-original .overlay {
-    height: 110%;
-    margin-top: -20px;
+    height: 130%;
+    margin-top: -30px;
+  }
+  .about-column {
+    margin: 1em;
   }
   .about-column img {
-    width: 400px;
-    height: 500px;
+    width: 250px;
+    height: 300px;
+    margin: 2em 0 0 0;
   }
   .about-text {
-    margin: 1em;
-    width: 400px;
+    width: 250px;
+    font-size: 110%;
+    margin: 0;
   }
   .house1-modal-content img {
     width: 70%;
   }
   .info {
     font-size: 105%;
+    width: auto;
   }
   .house2-modal-content img {
     width: 70%;
@@ -1537,9 +1556,12 @@ footer {
     flex-direction: column;
   }
   #welcome {
-    width: 300px;
-    margin-left: 3%;
+    width: auto;
+    margin: 1em 1em 1em 1em;
     font-size: 75%;
+  }
+  #welcome h3 {
+    padding-top: 1em;
   }
   #slide {
     flex-grow: 1;
